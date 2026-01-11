@@ -1,0 +1,130 @@
+:root{
+  /* Base */
+  --bg: #f2f2f2;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: rgba(91,136,114,.22);
+
+  /* Paleta verde fría (consistente) */
+  --green-main: #74AE93;   /* botones principales */
+  --green-dark: #5B8872;   /* hover / títulos */
+  --green-soft: #E6F0EC;   /* fondos suaves */
+  --green-soft-2: rgba(116,174,147,.14); /* resaltados */
+
+  /* Estados */
+  --danger-bg: rgba(255, 107, 107, .16);
+  --danger-br: rgba(255, 107, 107, .28);
+  --danger-tx: #7f1d1d;
+}
+
+*{ box-sizing: border-box; }
+html, body{ height: 100%; }
+
+body{
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* --- Tipografías y textos --- */
+h1,h2,h3,h4,h5,h6{ color: var(--green-dark); }
+.text-muted, .text-secondary{ color: var(--muted) !important; }
+
+/* --- Cards / Contenedores --- */
+.card{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+}
+
+.card .h3, .card .h4, .card .h5{ color: var(--text); }
+
+/* Bloque “info demo” o KPI */
+.kpi,
+.alert-info{
+  background: linear-gradient(180deg, var(--green-soft), rgba(230,240,236,.65));
+  border: 1px solid rgba(116,174,147,.25);
+  color: var(--text);
+}
+
+/* --- Formularios --- */
+.form-label{ color: var(--text); font-weight: 600; }
+.form-control{
+  border: 1px solid rgba(91,136,114,.25);
+  border-radius: 12px;
+  padding: .7rem .85rem;
+}
+.form-control:focus{
+  border-color: rgba(116,174,147,.9);
+  box-shadow: 0 0 0 .2rem rgba(116,174,147,.18);
+}
+
+/* --- Botones --- */
+.btn-brand{
+  background: var(--green-main);
+  border: 1px solid rgba(91,136,114,.20);
+  color: #fff;
+  font-weight: 800;
+  border-radius: 12px;
+}
+.btn-brand:hover{
+  background: var(--green-dark);
+  color: #fff;
+}
+
+/* Botón secundario elegante */
+.btn-secondary{
+  background: var(--green-soft) !important;
+  border: 1px solid rgba(116,174,147,.30) !important;
+  color: var(--text) !important;
+  font-weight: 800;
+  border-radius: 12px;
+}
+.btn-secondary:hover{
+  background: rgba(218,225,201,.75) !important;
+}
+
+/* Outline */
+.btn-outline-secondary{
+  border-color: rgba(91,136,114,.35) !important;
+  color: var(--green-dark) !important;
+  border-radius: 12px;
+  font-weight: 700;
+}
+.btn-outline-secondary:hover{
+  background: var(--green-soft) !important;
+}
+
+/* --- Alertas --- */
+.alert-danger{
+  background: var(--danger-bg) !important;
+  border: 1px solid var(--danger-br) !important;
+  color: var(--danger-tx) !important;
+}
+.alert-success{
+  background: var(--green-soft-2) !important;
+  border: 1px solid rgba(116,174,147,.25) !important;
+  color: var(--green-dark) !important;
+}
+
+/* --- Tabla --- */
+.table thead th{
+  color: var(--green-dark);
+  border-bottom: 1px solid rgba(91,136,114,.25);
+}
+.table-striped tbody tr:nth-of-type(odd){
+  background: rgba(230,240,236,.45);
+}
+
+/* --- Detalles visuales para “app look” --- */
+.container{
+  max-width: 980px;
+}
+
+/* Responsive*/
+@media (max-width: 576px){
+  .card{ padding: 1.25rem !important; }
+  .btn{ padding: .85rem 1rem; }
+}
